@@ -4575,6 +4575,11 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
 react-native-gesture-handler@~1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.7.0.tgz#0ef74a5ba836832e497dc49eb1ce58baa6c617e5"
@@ -4613,6 +4618,11 @@ react-native-screens@~2.10.1:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.10.1.tgz#06d22fae87ef0ce51c616c34a199726db1403b95"
   integrity sha512-Z2kKSk4AwWRQNCBmTjViuBQK0/Lx0jc25TZptn/2gKYUCOuVRvCekoA26u0Tsb3BIQ8tWDsZW14OwDlFUXW1aw==
+
+react-native-tab-view@^2.15.1:
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.15.1.tgz#cf4df4ffdec504263a2e06a6becd8831b9a19ad9"
+  integrity sha512-cDYl1pNWspbEHBjHrHVpIC40h4g8VhZe0CIG0CUKcouX98vHVfAojxhgWuRosq9qMhITHpLKM+7BmBLnhCJ0nw==
 
 react-native-web@~0.13.12:
   version "0.13.14"
@@ -4668,6 +4678,16 @@ react-navigation-stack@^2.8.4:
   dependencies:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
+
+react-navigation-tabs@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.9.2.tgz#2c148c75a77fba050fb36d16002a808dcb7d3a00"
+  integrity sha512-Kz3bFgqTruR76jIz69KQFsvh97oc73otuklaAbrxs6MxK8UkA6RlEk5v5VuPEMwD3RV2yke9SQwEWTDoAWtXTA==
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
+    react-lifecycles-compat "^3.0.4"
+    react-native-safe-area-view "^0.14.9"
+    react-native-tab-view "^2.15.1"
 
 react-navigation@^4.4.2:
   version "4.4.2"
