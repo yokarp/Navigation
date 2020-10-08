@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
 //Home
 const HomeScreen = ({ navigation }) => {
@@ -13,7 +14,7 @@ const HomeScreen = ({ navigation }) => {
       <Text>Bienvenido!</Text>
       <Button
         title="Ir a detalle"
-        onPress={() => navigation.navigate('Detalle', { user_id: 2})}
+        onPress={() => navigation.openDrawer()}
         />
       <StatusBar style="auto" />
     </View>
@@ -61,7 +62,7 @@ DetalleScreen.navigationOptions = ({ navigation }) => {
 }
 
 //Componente de navegación
-const AppNavigator = createBottomTabNavigator({
+const AppNavigator = createDrawerNavigator({
   Home: {
     screen: HomeScreen
   },
@@ -69,29 +70,7 @@ const AppNavigator = createBottomTabNavigator({
     screen: DetalleScreen
   }
 } , { initialRouteName: 'Home',
-      defaultNavigationOptions: ({ navigation }) => ({
-          tabBarIcon:({ focused, horizontal, tintColor }) => {
-            const { routeName } = navigation.state
-            let iconName
-            if ( routeName === 'Home' ){
-              iconName = `ios-information-circle${focused ? '' : '-outline'}`
-            } else {
-              iconName = 'ios-options'
-            }
 
-            return <Ionicons name={iconName} size={20} tintColor={tintColor} />
-          },
-          tabBarOptions:{
-            activeTintColor: navigation.state.routeName == "Home" ? '#e91e63' : 'orange',
-            inactiveTintColor: 'black',
-            labelStyle: {
-              fontSize: 16,
-            },
-            style:{
-              backgroundColor: '#fec'
-            }
-          }
-      })
 } );
 
 const RootStack = createStackNavigator({
